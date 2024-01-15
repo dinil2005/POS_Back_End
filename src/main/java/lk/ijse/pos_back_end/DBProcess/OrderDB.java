@@ -32,13 +32,13 @@ public class OrderDB {
 
             while (resultSet.next()){
                 OrderDTO orderDTO = new OrderDTO();
+
                 orderDTO.setOrder_Id(resultSet.getString(1));
                 orderDTO.setCustomer_Id(resultSet.getString(2));
                 orderDTO.setDate(resultSet.getString(3));
 
                 getAllOrders.add(orderDTO);
             }
-
 
             // Convert the list of customers to JSON using Jackson ObjectMapper
             ObjectMapper objectMapper = new ObjectMapper();
@@ -58,7 +58,7 @@ public class OrderDB {
     @SneakyThrows
     public void setOrderDetails(OrderDTO orderDTO, Connection connection){
 
-        System.out.println(orderDTO);
+
         PreparedStatement preparedStatement = connection.prepareStatement(SAVE_ORDER_DETAILS);
         preparedStatement.setString(1,orderDTO.getOrder_Id());
         preparedStatement.setString(2,orderDTO.getCustomer_Id());
@@ -103,5 +103,6 @@ public class OrderDB {
         }
     }
 
+    
 
 }

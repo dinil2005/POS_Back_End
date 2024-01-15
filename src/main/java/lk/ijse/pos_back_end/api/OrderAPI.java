@@ -47,8 +47,8 @@ public class OrderAPI extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        String lastOrderId = orderDB.getAllOrders(connection, resp);
-        writer.println(lastOrderId);
+        String getAllOrder = orderDB.getAllOrders(connection, resp);
+        writer.println(getAllOrder);
 
     }
 

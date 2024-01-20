@@ -7,7 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.pos_back_end.DBProcess.ItemDB;
 import lk.ijse.pos_back_end.DBProcess.OrderDB;
 
 import lk.ijse.pos_back_end.dto.OrderDTO;
